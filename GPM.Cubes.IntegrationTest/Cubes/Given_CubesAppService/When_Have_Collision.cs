@@ -175,9 +175,9 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
 
             var secondCube = new CubeCoordinates
             {
-                X = 2,
-                Y = 2,
-                Z = 2,
+                X = 3,
+                Y = 3,
+                Z = 3,
                 Dimension = 1,
             };
 
