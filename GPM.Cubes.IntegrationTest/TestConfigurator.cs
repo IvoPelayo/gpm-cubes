@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using GPM.Cubes.Application.Contracts;
-using GPM.Cubes.Application.Mapping;
 using GPM.Cubes.Application.Services;
+using GPM.Cubes.IntegrationTest.Mapping;
 
 namespace GPM.Cubes.IntegrationTest
 {

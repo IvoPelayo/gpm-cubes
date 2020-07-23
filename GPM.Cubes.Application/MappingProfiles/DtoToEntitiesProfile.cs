@@ -3,9 +3,9 @@ using GPM.Cubes.Application.Dtos;
 using GPM.Cubes.Domain.Entities;
 using GPM.Cubes.Domain.Factories;
 
-namespace GPM.Cubes.Application.Mapping
+namespace GPM.Cubes.Application.MappingProfiles
 {
-    internal class DtoToEntitiesProfile : Profile
+    public class DtoToEntitiesProfile : Profile
     {
         public override string ProfileName
         {

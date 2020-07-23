@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Cubes\Given_CubesAppService\When_Get_Intersection.cs" />
     <Compile Include="Cubes\Given_CubesAppService\When_Have_Collision.cs" />
+    <Compile Include="Mapping\AutoMapperConfiguration.cs" />
     <Compile Include="TestConfigurator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

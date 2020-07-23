@@ -5,14 +5,14 @@ namespace GPM.Cubes.Domain.Factories
     public class CubeFactory
     {
         private Vector _center;
-        private float _dimension;
+        private double _dimension;
 
         public static CubeFactory Cube()
         {
             return new CubeFactory();
         }
 
-        public CubeFactory WithCenterCoordinates(float x, float y, float z)
+        public CubeFactory WithCenterCoordinates(double x, double y, double z)
         {
             _center = new Vector(x, y, z);
             return this;
@@ -24,7 +24,7 @@ namespace GPM.Cubes.Domain.Factories
             return this;
         }
 
-        public CubeFactory WithDimension(float size)
+        public CubeFactory WithDimension(double size)
         {
             _dimension = size;
             return this;

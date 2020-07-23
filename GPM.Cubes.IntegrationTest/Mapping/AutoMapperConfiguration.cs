@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
+using GPM.Cubes.Application.MappingProfiles;
 
-namespace GPM.Cubes.Application.Mapping
+namespace GPM.Cubes.IntegrationTest.Mapping
 {
-    public class AutoMapperConfiguration
+    internal class AutoMapperConfiguration
     {
         public static IMapper GetMapper()
         {
@@ -13,6 +14,8 @@ namespace GPM.Cubes.Application.Mapping
             });
 
             configuration.CompileMappings();
+            configuration.AssertConfigurationIsValid();
+
             return configuration.CreateMapper();
         }
     }

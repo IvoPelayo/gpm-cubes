@@ -14,16 +14,19 @@ namespace GPM.Cubes.Application.Services
             _mapper = mapper;
         }
 
-        public float GetIntersection(CubeCoordinates coordinates1, CubeCoordinates coordinates2)
+        public double GetIntersection(CubeCoordinates firstCubeCoordinates, CubeCoordinates secondCubeCoordinates)
         {
-            var cube1 = _mapper.Map<CubeCoordinates, Cube>(coordinates1);
-            var cube2 = _mapper.Map<CubeCoordinates, Cube>(coordinates2);
+            var firstCube = _mapper.Map<CubeCoordinates, Cube>(firstCubeCoordinates);
+            var secondCube = _mapper.Map<CubeCoordinates, Cube>(secondCubeCoordinates);
 
-            return 0;
+            throw new System.NotImplementedException();
         }
 
-        public bool HaveCollision(CubeCoordinates cube, CubeCoordinates cube2)
+        public bool HaveCollision(CubeCoordinates firstCubeCoordinates, CubeCoordinates secondCubeCoordinates)
         {
+            var firstCube = _mapper.Map<CubeCoordinates, Cube>(firstCubeCoordinates);
+            var secondCube = _mapper.Map<CubeCoordinates, Cube>(secondCubeCoordinates);
+
             throw new System.NotImplementedException();
         }
     }
