@@ -10,7 +10,7 @@ The purpose of this exercise is to define the application design and architectur
 
 ### Notes
 
-- You can check the commit history to see the development sequence of the solution.
+- You can check the [commit history](https://github.com/IvoPelayo/gpm-cubes/commits/master) to see the development sequence of the solution.
 
 - Since this is a simple excersise doesn't have too much layer complexity, only Application & Domain are part of the solution (no infrastructure, adapters, or top level layers whatsoever).
 
