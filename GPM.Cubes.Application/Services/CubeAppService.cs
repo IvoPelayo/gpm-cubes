@@ -19,7 +19,7 @@ namespace GPM.Cubes.Application.Services
             var firstCube = _mapper.Map<CubeCoordinates, Cube>(firstCubeCoordinates);
             var secondCube = _mapper.Map<CubeCoordinates, Cube>(secondCubeCoordinates);
 
-            throw new System.NotImplementedException();
+            return firstCube.Intersection(secondCube);
         }
 
         public bool HaveCollision(CubeCoordinates firstCubeCoordinates, CubeCoordinates secondCubeCoordinates)
@@ -27,7 +27,7 @@ namespace GPM.Cubes.Application.Services
             var firstCube = _mapper.Map<CubeCoordinates, Cube>(firstCubeCoordinates);
             var secondCube = _mapper.Map<CubeCoordinates, Cube>(secondCubeCoordinates);
 
-            throw new System.NotImplementedException();
+            return firstCube.Collides(secondCube);
         }
     }
 }

@@ -36,6 +36,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\CubeDimension.cs" />
     <Compile Include="Entities\Cube.cs" />
     <Compile Include="Entities\Vector.cs" />
     <Compile Include="Factories\CubeFactory.cs" />

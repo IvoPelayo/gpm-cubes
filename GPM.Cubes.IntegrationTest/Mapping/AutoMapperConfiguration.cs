@@ -10,6 +10,7 @@ namespace GPM.Cubes.IntegrationTest.Mapping
             var configuration = new MapperConfiguration(cfg =>
             {
                 cfg.AllowNullCollections = true;
+                cfg.AddGlobalIgnore("");
                 cfg.AddProfile<DtoToEntitiesProfile>();
             });
 

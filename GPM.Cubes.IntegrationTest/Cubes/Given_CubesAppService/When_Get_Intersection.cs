@@ -1,6 +1,7 @@
 ﻿using GPM.Cubes.Application.Contracts;
 using GPM.Cubes.Application.Dtos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
 {
@@ -51,8 +52,8 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
             var result = _cubesAppService.GetIntersection(firstCube, secondCube);
 
             //ASSERT
-            Assert.AreEqual(firstCube, result); // TODO: VolumeCalculator
-            Assert.AreNotEqual(secondCube, result);
+            Assert.AreEqual(GetCubeVolume(firstCube.Dimension), result);
+            Assert.AreNotEqual(GetCubeVolume(secondCube.Dimension), result);
         }
 
         [TestMethod]
@@ -65,14 +66,14 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
                 X = 0,
                 Y = 0,
                 Z = 0,
-                Dimension = 3,
+                Dimension = 1,
             };
 
             //ACT
-            var result = _cubesAppService.HaveCollision(cube, cube);
+            var result = _cubesAppService.GetIntersection(cube, cube);
 
             //ASSERT
-            Assert.AreEqual(cube, result); // TODO: VolumeCalculator
+            Assert.AreEqual(GetCubeVolume(cube.Dimension), result); // TODO: VolumeCalculator
         }
 
         [TestMethod]
@@ -90,7 +91,7 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
 
             var secondCube = new CubeCoordinates
             {
-                X = 2,
+                X = 1,
                 Y = 0,
                 Z = 0,
                 Dimension = 1,
@@ -161,5 +162,14 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
         }
 
         #endregion .: Test Methods :.
+
+        #region .: Private Methods :.
+
+        private double GetCubeVolume(double cubeDimension)
+        {
+            return Math.Pow(cubeDimension, 3);
+        }
+
+        #endregion .: Private Methods :.
     }
 }

@@ -56,12 +56,12 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
                 X = 0,
                 Y = 0,
                 Z = 0,
-                Dimension = 3,
+                Dimension = 2,
             };
 
             var secondCube = new CubeCoordinates
             {
-                X = 4,
+                X = 2,
                 Y = 0,
                 Z = 0,
                 Dimension = 3,
@@ -76,7 +76,7 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
 
         [TestMethod]
         [TestCategory("IntegrationTest"), TestCategory("CubeAppService"), TestCategory("Collision")]
-        public void If_Cubes_Touch_Then_Collide()
+        public void If_Cubes_Touch_Then_Not_Collide()
         {
             //ARRANGE
             var firstCube = new CubeCoordinates
@@ -84,7 +84,7 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
                 X = 0,
                 Y = 0,
                 Z = 0,
-                Dimension = 1,
+                Dimension = 2,
             };
 
             var secondCube = new CubeCoordinates
@@ -92,14 +92,14 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
                 X = 2,
                 Y = 0,
                 Z = 0,
-                Dimension = 1,
+                Dimension = 2,
             };
 
             //ACT
             var result = _cubesAppService.HaveCollision(firstCube, secondCube);
 
             //ASSERT
-            Assert.IsTrue(result);
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
@@ -117,7 +117,7 @@ namespace GPM.Cubes.IntegrationTest.Cubes.Given_CubesAppService
 
             var secondCube = new CubeCoordinates
             {
-                X = 2.001,
+                X = 1.001,
                 Y = 0,
                 Z = 0,
                 Dimension = 1,

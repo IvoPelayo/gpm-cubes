@@ -37,12 +37,12 @@ namespace GPM.Cubes.Domain.UnitTest.Cube.Given_Cube
             var firstCube = CubeFactory
                 .Cube()
                 .WithCenterCoordinates(0, 0, 0)
-                .WithDimension(3)
+                .WithDimension(2)
                 .Build();
 
             var secondCube = CubeFactory
                .Cube()
-               .WithCenterCoordinates(4, 0, 0)
+               .WithCenterCoordinates(2, 0, 0)
                .WithDimension(3)
                .Build();
 
@@ -55,26 +55,26 @@ namespace GPM.Cubes.Domain.UnitTest.Cube.Given_Cube
 
         [TestMethod]
         [TestCategory("UnitTest"), TestCategory("Cube"), TestCategory("Collision")]
-        public void If_Cubes_Touch_Then_Collide()
+        public void If_Cubes_Touch_Then_Not_Collide()
         {
             //ARRANGE
             var firstCube = CubeFactory
                 .Cube()
                 .WithCenterCoordinates(0, 0, 0)
-                .WithDimension(1)
+                .WithDimension(2)
                 .Build();
 
             var secondCube = CubeFactory
                .Cube()
                .WithCenterCoordinates(2, 0, 0)
-               .WithDimension(1)
+               .WithDimension(2)
                .Build();
 
             //ACT
             var result = firstCube.Collides(secondCube);
 
             //ASSERT
-            Assert.IsTrue(result);
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
@@ -90,7 +90,7 @@ namespace GPM.Cubes.Domain.UnitTest.Cube.Given_Cube
 
             var secondCube = CubeFactory
                .Cube()
-               .WithCenterCoordinates(2.001, 0, 0)
+               .WithCenterCoordinates(1.001, 0, 0)
                .WithDimension(1)
                .Build();
 
