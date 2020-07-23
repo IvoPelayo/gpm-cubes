@@ -1,42 +1,21 @@
-# Livy Webservice
+# Cubes excersise
 
-This is a simple project to show my skills as a C# .NET Developer. You can take a look at the requirements for this excercise [here](Assessment_back-end_(Senior)_v1.0.pdf)
+This is a simple project to show my skills as a C# .NET Developer. Requirement:
 
-## Getting Started
-
-This is a public repo, so feel free to clone it and take a look at the solution.
+Design and start and application (or test project) which accepts as input dimensions and coordinates of two cubic objects (considering a 3D space).
+The application must determine whether the two objects collide and calculate the intersected volume.
+It's not a math exercise, so it is acceptable to consider the two cubes are parallel, so there is no rotation among themselves.
+The input coordinates define the center of the cube.
+The purpose of this exercise is to define the application design and architecture, focusing on the parts which ensure the correctness, performance and code clarity. Any design pattern is accepted and should be justified.
 
 ### Prerequisites
 
 To run this solution locally you will need:
-- Visual Studio 2017 or above
-- Nuget
-- IIS
-- Windows powershell (optional)
-- Postman (to run examples)
-
-### Build
-
-If you have experience with Visual Studio you could simply start the project and visit http://localhost:1487
-
-If you want a local instance of the site without Visual Studio running, use the Setup script located on the Tools/Setup folder:
-
-- run Windows Powershell as Administrator
-- navigate to directory Tools/Setup
-- run:
-
-```
-... Tools/Setup> ./Setup.ps1 *path-to-solution* *msbuild-exe-path(optional)*
-```
-- web service will be available at http://localhost:1800
+- Visual Studio 2017
 
 ### Test
 
-You can find a full list of examples [here](Livy-Examples.postman_collection)
-Import this collection to postman and start testing! You can find more information about every call on the description that each one provides
-
-
-Note: to simplify the api calls it always use an admin user accessToken. methods on the policies controller are bloqued to users without that role
+This solution has Unit and Integration Test, both runeable from the VS TestExplorer window.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
