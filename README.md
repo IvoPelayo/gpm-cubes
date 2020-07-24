@@ -1,4 +1,4 @@
-# Cubes excersise
+# Cubes exercise
 
 This is a simple project to show my skills as a C# .NET Developer. Requirement:
 
@@ -12,18 +12,13 @@ The purpose of this exercise is to define the application design and architectur
 
 - You can check the [commit history](https://github.com/IvoPelayo/gpm-cubes/commits/master) to see the development sequence of the solution.
 
-- Since this is a simple excersise doesn't have too much layer complexity, only Application & Domain are part of the solution (no infrastructure, adapters, or top level layers whatsoever).
+- Since this is a simple exercise doesn't have too much layer complexity, only Application & Domain are part of the solution (no infrastructure, adapters, or top level layers whatsoever).
 
 - This serves as a Core, while multiple top level layers could have access to this features. An example of DI pattern implementation is on [TestConfigurator](GPM.Cubes.IntegrationTest/TestConfigurator.cs) class.
 
-### Prerequisites
-
-To run this solution locally you will need:
-- Visual Studio 2017
-
 ### Test
 
-This solution has Unit and Integration Test, both runeable from the VS TestExplorer window.
+This solution has Unit and Integration Test, both runable from the VS TestExplorer window.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
